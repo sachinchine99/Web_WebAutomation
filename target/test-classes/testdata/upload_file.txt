@@ -1,9 +1,0 @@
-ShopNest QA Automation — File Upload Test Data
-================================================
-This file is used as a fixture for the FileUploadTest suite.
-It validates that the upload mechanism on the-internet.herokuapp.com
-correctly receives, processes, and confirms a file upload.
-
-Framework: Selenium WebDriver + TestNG + Java 17
-Author: Sachin — QA Automation Engineer
-Assignment: ShopNest Checkout 2.0 — UI Automation
