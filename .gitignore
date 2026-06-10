@@ -1,0 +1,17 @@
+# Maven / Java build files
+target/
+
+# Test reports
+test-output/
+allure-results/
+
+# Logs
+*.log
+
+# IDE files
+.classpath
+.project
+.settings/
+
+# OS files
+.DS_Store
