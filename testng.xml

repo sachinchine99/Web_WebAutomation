@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+  ShopNest UI Automation — TestNG Suite
+  ======================================
+  thread-count="2" — safe for CI; increase to 4 if running on higher-spec machines.
+  Each test class gets its own WebDriver instance via DriverManager (ThreadLocal).
+-->
+<suite name="ShopNest UI Automation Suite"
+       verbose="1"
+       parallel="classes"
+       thread-count="2">
+
+    <listeners>
+        <listener class-name="com.shopnest.listeners.TestListener"/>
+    </listeners>
+
+    <!-- ── SMOKE — critical path only ──────────────────────────────────────── -->
+    <test name="Smoke Tests" preserve-order="true">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.shopnest.tests.LoginTest"/>
+            <class name="com.shopnest.tests.FormAuthTest"/>
+            <class name="com.shopnest.tests.DynamicControlsTest"/>
+            <class name="com.shopnest.tests.FileUploadTest"/>
+        </classes>
+    </test>
+
+    <!-- ── REGRESSION — full suite ─────────────────────────────────────────── -->
+    <test name="Regression Tests" preserve-order="true">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.shopnest.tests.LoginTest"/>
+            <class name="com.shopnest.tests.FormAuthTest"/>
+            <class name="com.shopnest.tests.DynamicControlsTest"/>
+            <class name="com.shopnest.tests.FileUploadTest"/>
+        </classes>
+    </test>
+
+</suite>
