@@ -1,13 +1,10 @@
 package pages;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import base.BasePage;
 import utilities.ConfigReader;
 import utilities.WaitUtility;
-
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -106,7 +103,6 @@ public class FileUploadPage extends BasePage {
     public boolean isConfirmationHeaderDisplayed() {
         return isDisplayed(uploadConfirmationHeader);
     }
-
     // ─── Private helpers ──────────────────────────────────────────────────────
 
     private File resolveClasspathFile(String resourcePath) {
